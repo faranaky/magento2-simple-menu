@@ -2,7 +2,7 @@
 
 Compatible with Magento 2.1 +
 
-###Installation
+### Installation
 * Download zip file
 * Extract it
 * Put it in app/code/Fary directory on your magento project  
@@ -13,14 +13,14 @@ Compatible with Magento 2.1 +
 `php bin/magento cache:clean`  
 
 
-###How it works
+### How it works
 After installing module go to admin panel and category management page.  
 You can see three new fields have been added to categories:  
 ![image](/readme/images/category_new_fields.png?raw=true)
 
 If you wish to have your category as menu item same as before, do not touch these fields.  
 
-####Navigation Type
+#### Navigation Type
 Take a look at navigation type field, it has four options:
 * Category
 * CMS Page
@@ -65,14 +65,9 @@ When you set "Yes" to mega menu field, another field will be shown as "Mega Menu
 And the result is:  
 ![image](/readme/images/front_mega_menu.png?raw=true)  
 
-###Useful Information
+### Useful Information
 - This module works with virtual categories as well.
 - If you are frontend developer you can find each menu item has sufficient classes for having best experience of styling this menu.  
 
 ###### Help
 If you need help please contact `yazdanfar.faranak@gmail.com`.
-
- 
-
-
-
