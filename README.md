@@ -5,7 +5,7 @@ Compatible with Magento 2.1 +
 ### Installation
 * Download zip file
 * Extract it
-* Put it in app/code/Fary directory on your magento project  
+* Put it in app/code/Fary/SimpleMenu directory on your magento project  
 ![image](/readme/images/module_directory.png?raw=true)
 * Rename it to SimpleMenu
 - Go to terminal on magento path and run these commands: 
