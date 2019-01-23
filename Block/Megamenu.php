@@ -6,20 +6,24 @@ use Magento\Framework\Data\Tree\Node;
 
 class Megamenu extends \Magento\Catalog\Plugin\Block\Topmenu
 {
-    protected $collectionFactory;
+    private $collectionFactory;
 
-    protected $storeManager;
+    private $storeManager;
 
-    protected $layerResolver;
+    private $layerResolver;
 
-    public function __construct(\Magento\Catalog\Helper\Category $catalogCategory, \Magento\Catalog\Model\ResourceModel\Category\CollectionFactory $categoryCollectionFactory, \Magento\Store\Model\StoreManagerInterface $storeManager, \Magento\Catalog\Model\Layer\Resolver $layerResolver)
-    {
+    public function __construct(
+        \Magento\Catalog\Helper\Category $catalogCategory,
+        \Magento\Catalog\Model\ResourceModel\Category\StateDependentCollectionFactory $categoryCollectionFactory,
+        \Magento\Store\Model\StoreManagerInterface $storeManager,
+        \Magento\Catalog\Model\Layer\Resolver $layerResolver
+    ) {
         parent::__construct($catalogCategory, $categoryCollectionFactory, $storeManager, $layerResolver);
+        $this->catalogCategory = $catalogCategory;
         $this->collectionFactory = $categoryCollectionFactory;
-        $this->storeManager      = $storeManager;
-        $this->layerResolver     = $layerResolver;
+        $this->storeManager = $storeManager;
+        $this->layerResolver = $layerResolver;
     }
-
     /**
      * Convert category to array
      *

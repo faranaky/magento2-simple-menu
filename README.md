@@ -1,6 +1,8 @@
 # Magento Simple Menu
 
-Compatible with Magento 2.1 +
+Compatible with Magento 2.1.* and 2.2.*  
+
+For Magento 2.3 checkout this branch: version_2.3
 
 ### Installation
 * Download zip file

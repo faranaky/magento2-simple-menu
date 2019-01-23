@@ -25,7 +25,7 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
                                 \Magento\Eav\Model\Config $eavConfig,
                                 \Magento\Cms\Helper\Page $pageHelper,
                                 \Magento\Cms\Model\Template\FilterProvider $filterProvider,
-                                $data = [])
+                                array $data = [])
     {
         $this->pageHelper = $pageHelper;
         $this->categoryArray = $categoryArray;
@@ -57,7 +57,7 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
         \Magento\Framework\Data\Tree\Node $menuTree,
         $childrenWrapClass,
         $limit,
-        $colBrakes = []
+        array $colBrakes = []
     ) {
         $html = '';
 
@@ -329,7 +329,7 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
 
         $promoBlock = ($child->hasChildren() && $isMegaMenu) ? '<li class="promo">' . $promoBlock . '</li>' : '';
 
-        $colStops = null;
+        $colStops = [];
         if ($childLevel == 0 && $limit) {
             $colStops = $this->_columnBrake($child->getChildren(), $limit);
         }
